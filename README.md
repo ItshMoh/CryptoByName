@@ -1,19 +1,50 @@
-#**CryptoByName**
+# CryptoByName
 
-This project automates the Crypto Payment. It works with natural language. 
-It is the POC of the product that i am building. 
+A natural language crypto payment automation tool.
 
-##**USAGE**
+## Overview
 
-For using this You need to setup a mongo db where you have to store the public address of the recipient and his name or any thing that you call him.
-You have to setup your private key in the project for signing the transactions. You also have to setup the network in which you will be working. 
-In the project I am working with the Oasis Network. You can use any one just update the respective settings.
+CryptoByName lets you send cryptocurrency using simple natural language commands. Instead of dealing with complex wallet addresses, just type commands like "transfer 3 ETH to Shweta" - making crypto transactions as easy as sending a text message.
 
-Now after setting up these things you can run the project and in the terminal you can type something like " transfer 3 eth to Shweta"
-You must have setup the Shweta name with her address in the mongo db. 
+## Features
 
-This helps to transfering the crypto to someone without any hassle. It is same as once we save the contacts to dial we just have to remember the name not the number.
-Rembering name is much more  like human and easy.
+- Natural language processing for crypto transfers
+- Send to recipients by name instead of addresses
+- Currently works with Oasis Network (configurable)
+- Simple CLI interface
 
-**NOTE**
-It is just in developing so don't try with real crypto. You can use it with the test networks.
+## Setup
+
+1. Configure a MongoDB database to store recipient names and addresses
+2. Set up your private key for transaction signing
+3. Configure your preferred network (default: Oasis Network)
+
+## Usage
+
+After setup, simply run the application and use natural language commands in the terminal:
+
+```
+transfer 3 eth to Shweta
+```
+
+The system looks up Shweta's wallet address from your contacts database and handles the transaction automatically.
+
+## Requirements
+
+- MongoDB
+- Private key for signing transactions
+- Network configuration
+
+## Important Note
+
+This project is still under development - please only use with test networks and test coins. Do not use with real cryptocurrency at this stage.
+
+## Future Development
+
+- Feature for getting information about the blockchain with interactive graphs to track the progress.
+- Transaction history and tracking
+- Improved security features
+
+## Contributing
+
+Contributions welcome! This is a proof-of-concept that's actively being developed into a full product.
